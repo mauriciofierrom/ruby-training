@@ -17,8 +17,19 @@ Nice, sexy and can dance salsa :dancer:.
   ...
 ```
 
+
 Then we create our own class `clase` (which is actually a factory but I'll try and make a real
 class sometime).
+
+Now, here things get a turn for the complejo (complex). We start using METAPROGRAMMING.
+
+> Abusing metaprogramming can lead to some nasty results that vary from a 
+nightmare of an app design, to actual security vulnerabilities.
+> From the app design part, it can be useful for sharing code but the downsides of using it wrong parallel
+> with inheritance's. You must be really sure that the abstraction is the right one, and if not, it is really costly to change the code.
+> From the vulnerabilites side, using `send` & `eval` pose various security issues. `send` allows to execute
+> private methods of objects, as it just bypasses encapsulation. `eval` straight up allows arbitrary execution of code.
+> So, Handle with care :tm:. If you're a toddler rubyist, do not use.
 
 We use `instance_eval` to evaluate all the block passed as a parameter to the `clase` method
 in the context of the newly created instance. It's counterpart and archenemy is `class_eval` which,
@@ -33,16 +44,6 @@ you might've guessed it, evaluates code at the class-level.
   end
   ...
 ```
-
-Now, here things get a turn for the complejo (complex). We start using METAPROGRAMMING.
-
-> Abusing metaprogramming can lead to some nasty results that vary from a 
-nightmare of an app design, to actual security vulnerabilities.
-> From the app design part, it can be useful for sharing code but the downsides of using it wrong parallel
-> with inheritance's. You must be really sure that the abstraction is the right one, and if not, it is really costly to change the code.
-> From the vulnerabilites side, using `send` & `eval` pose various security issues. `send` allows to execute
-> private methods of objects, as it just bypasses encapsulation. `eval` straight up allows arbitrary execution of code.
-> So, Handle with care :tm:. If you're a toddler rubyist, do not use.
 
 We use the `method_missing` eh... method, to capture all non existing eh... methods in the `Clase` class. One thing
 here. It is important to always pair `method_missing` with `respond_to_method_missing` in order to curate the
