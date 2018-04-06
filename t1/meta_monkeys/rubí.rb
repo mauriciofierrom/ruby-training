@@ -1,12 +1,12 @@
 module Kernel
+  def poner_cadena(str)
+    puts str
+  end
+
   def clase(klass, &block)
     instance = Clase.new
     instance.instance_eval(&block)
     instance
-  end
-
-  def poner_cadena(str)
-    puts str
   end
 
   class Clase
