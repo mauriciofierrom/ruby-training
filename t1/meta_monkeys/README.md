@@ -34,8 +34,7 @@ you might've guessed it, evaluates code at the class-level.
   ...
 ```
 
-Now, here things get a turn for the complejo (complex). We create our own attribute macros. To do it
-we use METAPROGRAMMING.
+Now, here things get a turn for the complejo (complex). We start using METAPROGRAMMING.
 
 > Abusing metaprogramming can lead to some nasty results that vary from a 
 nightmare of an app design, to actual security vulnerabilities.
