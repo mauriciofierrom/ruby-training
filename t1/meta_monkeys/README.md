@@ -68,7 +68,7 @@ of the function and the block, which handles paremeters and everything for us.
 
 We handle `attr_reader`, `attr_writer` and `attr_accessor` in Spanish. What these methods do is
 create methods for getting or setting an instance variable. So first, we create the instance variable using
-`instance_variable_set` which needs a name and a default creationg value, which is ok to leave as `nil`
+`instance_variable_set` which needs a name and a default creation value, which is ok to leave as `nil`
 
 The methods are:
 
@@ -107,4 +107,17 @@ And so we create all these methods:
 ```
 
 That's all there is to it. We can then create objects with the given attribute accessors 
-in Spanish and even define methods, which will Just Work :tm:
+in Spanish and even define methods, which should Just Work :tm:
+
+```ruby
+  @b =
+    clase :algo {
+      atributo_de_lectura :algo_de_lectura
+      atributo_de_escritura :algo_de_escritura
+      atributo_de_acceso :algo_accesible
+
+      saludar ->(cadena) {
+        poner_cadena cadena
+      }
+  }
+```
