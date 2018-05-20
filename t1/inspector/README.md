@@ -5,7 +5,7 @@ objects, and it's not a good one, just like Inspecpor G. Lestrade was not a good
 one, so there you have it, hence the name.
 
 Now that I think about it for a second, if it's an introspector, maybe Rodin's
-`The Thinker` would've made a better name. Damn. Anyhow, ONWARDS!
+`The Thinker` would've been a better name. Damn. Anyhow, ONWARDS!
 
 ## Introspection
 Ruby has a lot of methods for class and object introspection:
