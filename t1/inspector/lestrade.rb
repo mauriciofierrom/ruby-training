@@ -27,6 +27,8 @@ class Object
     self.public_methods(false).each { |method_name| print_methods(method_name) }
     puts "Protected"
     self.protected_methods(false).each { |method_name| print_methods(method_name) }
+    puts "Private methods"
+    self.privated_methods(false).each { |method_name| print_methods(method_name) }
     puts "Singleton"
     # Also can be methods(false)
     self.singleton_methods.each { |method_name| print_methods(method_name) }
